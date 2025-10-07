@@ -8,10 +8,12 @@
 
 ## Team
 
-
-- **Thomas Torres** (@ThomasTorres2024)
+## Team
+        
+- **Thomas Torres** ([@ThomasTorres2024](https://github.com/ThomasTorres2024))
 - **Elton Baidoo** ([@eltonbaidoo](https://github.com/eltonbaidoo))
-- **Teammate 3 Name** (@githubusername)
+- **Teammate 3 Name** ([@jrhenderson03](https://github.com/jrhenderson03))
+- **Teammate 4 Name** ([@githubusername](https://github.com/githubusername))
 - **Teammate 4 Name** (@githubusername)
 
 
