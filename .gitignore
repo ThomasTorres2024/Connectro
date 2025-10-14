@@ -146,5 +146,5 @@ coverage/
 # Testing
 .test_coverage/
 test/.test_coverage.dart
-/LOCAL
+/LOCAL/
 /.local/
