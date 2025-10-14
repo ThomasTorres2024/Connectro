@@ -1,4 +1,7 @@
 # Contributor Covenant Code of Conduct
+<img width="534" height="152" alt="signature" src="https://github.com/user-attachments/assets/24be19b5-7512-454c-8ec5-896f67e8abcb" />
+
+
 
 
 ## Our Team's Unique Contributions to the Pledge
