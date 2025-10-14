@@ -10,6 +10,7 @@ Supporting Data
 Team Action 
 	- UI must be developed with the goal in mind of making navigation extremely simple for the users because users will not be tech savvy
 	- 2FA has some innate level of being difficult, there's not much that can be done other than instructions and maybe a little help guide 
+
 ---
 
 ## Elton 
