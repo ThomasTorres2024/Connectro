@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 
+# Local files (team-specific, not committed)
+LOCAL/
+
 # IntelliJ related
 *.iml
 *.ipr
@@ -146,3 +149,5 @@ coverage/
 # Testing
 .test_coverage/
 test/.test_coverage.dart
+/LOCAL/
+/.local/

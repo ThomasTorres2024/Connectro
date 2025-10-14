@@ -2,6 +2,7 @@
 <img width="534" height="152" alt="signature" src="https://github.com/user-attachments/assets/24be19b5-7512-454c-8ec5-896f67e8abcb" />
 
 
+
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
