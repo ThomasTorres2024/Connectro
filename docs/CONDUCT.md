@@ -1,5 +1,19 @@
 # Contributor Covenant Code of Conduct
 
+
+## Our Team's Unique Contributions to the Pledge
+    - No distracted use use technology (e.g. phones away) during all team meetings ( as per CSC 305 )
+    - Decisions will be made by majority vote 
+    - If someone is late or has an emergency or something is pressing it's fine. Please be here once a week.
+    - Attendance: We'll talk to the student first as a group about performance and what we can do to help, we'll have a couple interventions and if nothing changes we should likely ask the professor 
+    - During scrums and closing up periods in the class we will agree on who should get what task and why. Attendance policy will be used but for poorly completed assignments. 
+    - Participation: Every member should come to class, do their work, and the read the discord group chat and that's all
+    - Meeting Times : In class, additional meetings are added as needed.
+    - Agenda: SCRUM master takes notes and shares them in a google doc.
+    - Tardiness: If someone is consistently tardy they need a good excuse. Otherwise, it's not a big deal as long as they still show up for enough time.
+    - Conversational Courtesy: So far we have been very respectful in conversation so far. If something comes up, we will try and resolve it amongst ourselves and not escalate it further than that.
+    - Enforcement/Feedback - Most of the policies here are common sense and decent courtesy, and do not really need enforcement. If someone struggles we'll talk with them. If they don't want to improve and don't care, we can ask the professor about it and see how to take it from there once there is nothing we can do any longer. 
+
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
