@@ -1,8 +1,4 @@
 # Contributor Covenant Code of Conduct
-<img width="534" height="152" alt="signature" src="https://github.com/user-attachments/assets/24be19b5-7512-454c-8ec5-896f67e8abcb" />
-
-
-
 
 ## Our Team's Unique Contributions to the Pledge
     - No distracted use use technology (e.g. phones away) during all team meetings ( as per CSC 305 )
@@ -67,6 +63,15 @@ Community leaders will follow these Community Impact Guidelines in determining t
 
 **Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
 **Communicate all porgress with the Team**
+
+---
+
+# Signatures 
+
+<img width="637" height="189" alt="image" src="https://github.com/user-attachments/assets/d8a5a95e-8463-4496-85da-1851bff48c9f" />
+<img width="534" height="152" alt="signature" src="https://github.com/user-attachments/assets/24be19b5-7512-454c-8ec5-896f67e8abcb" />
+
+---
 
 ## Attribution
 
