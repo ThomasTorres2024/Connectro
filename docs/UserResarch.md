@@ -27,3 +27,16 @@ Among those who do create or send client documents, the following tools were men
 ## Greg:
 - Observation: Albiet we didn't get any initial responses from people in our target demographic, non-english speakers still showed a lot of interest and gave very good feedback.
 - Supporting data: 3 survey results showed people with non-english speaking families. Their specific feedback gave good points for specifying our focus
+
+---
+
+## Jack:
+#### Observation: 
+- A general lack of tech-savvyness is the most critical piece of making software for an older crowd
+- Struggling with things that are common on apps nowadays are a number 1 priority to make more accessible, like 2FA.
+#### Survey Responses
+- A chunk of survey responses highlighted issues with the aforementioned issues
+- The main problem area wasn't 2FA, but instead UX and UI implementation being easy to use for both young people and older users
+#### Solutions
+- The main solution is to make an easily navigatable UI for the older crowd of our users, with obvious functions across the app that are easy to use and understand
+- To follow this, potentially creating a user-help guide for the app to begin with could help, and showing a demo video showcasing the app in use
