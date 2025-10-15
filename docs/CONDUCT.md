@@ -73,6 +73,7 @@ Community leaders will follow these Community Impact Guidelines in determining t
 <img width="637" height="189" alt="image" src="https://github.com/user-attachments/assets/d8a5a95e-8463-4496-85da-1851bff48c9f" />
 <img width="534" height="152" alt="signature" src="https://github.com/user-attachments/assets/24be19b5-7512-454c-8ec5-896f67e8abcb" />
 <img width="582" height="180" alt="signature" src="https://drive.google.com/file/d/1hITMuTOpHcxQm7pfnq5nM8WBRFguK4Bp/view?usp=sharing" />
+<img width="583" height="180" alt="image" src="https://github.com/user-attachments/assets/a5287a9e-6ecb-45c4-9fad-101afa12d59a" />
 
 ![CSC 305](images/csc305.png)
 ---
