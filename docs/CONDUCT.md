@@ -1,5 +1,7 @@
 # Contributor Covenant Code of Conduct
 
+
+
 ## Our Team's Unique Contributions to the Pledge
     - No distracted use use technology (e.g. phones away) during all team meetings ( as per CSC 305 )
     - Decisions will be made by majority vote 
@@ -72,6 +74,7 @@ Community leaders will follow these Community Impact Guidelines in determining t
 <img width="534" height="152" alt="signature" src="https://github.com/user-attachments/assets/24be19b5-7512-454c-8ec5-896f67e8abcb" />
 <img width="582" height="180" alt="signature" src="https://drive.google.com/file/d/1hITMuTOpHcxQm7pfnq5nM8WBRFguK4Bp/view?usp=sharing" />
 
+![CSC 305](images/csc305.png)
 ---
 
 ## Attribution
