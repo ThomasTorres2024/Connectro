@@ -9,4 +9,5 @@ Thomas Torres A/B Test design Contribution
 * Variations - I want to try a dropdown menu that has a large list of languages that might not be fun to navigate, maybe a dropdown menu crossed with a search bar that you can check but maybe that will be confusing. Maybe I could have a section where users type their desired languages and it pops up.
 
 This is the layout I would use for this section:
+
 <img width="376" height="765" alt="image" src="https://github.com/user-attachments/assets/fe1dfde5-3142-446c-b629-cbbcfbff426c" />
