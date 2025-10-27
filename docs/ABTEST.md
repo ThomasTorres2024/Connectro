@@ -9,7 +9,7 @@ Test 1: Translated Documents Screen Placement
 - About 10-15% of users will be able to see the experiment. Adding an extra way to view Translated Documents on paper sounds like a good quality of life feature. Although it may not be completely necessary and may have no impact on user retention. If anything, the app is designed to thrive on ease of use and thus, more buttons and screens may actually harm user retention.
 - Variations: ???
 
-Thomas Torres A/B Test design Contribution
+## Thomas Torres A/B Test design Contribution
 * A/B Test Name: Separate Document Sheet for Translation or Same Sheet With Radio Buttons
 * User Story Number : US4 (Golde Path)
 * Metrics: User Engagement
