@@ -1,6 +1,7 @@
-place holder
+# A/B Testing Plans - Connectro
+---
 
-Greg Piturro A/B Test
+## Greg Piturro A/B Test
 Test 1: Translated Documents Screen Placement
 - US # ???
 - Measures average number of documents created by active users per day
@@ -20,3 +21,77 @@ Thomas Torres A/B Test design Contribution
 This is the layout I would use for this section:
 
 <img width="376" height="765" alt="image" src="https://github.com/user-attachments/assets/fe1dfde5-3142-446c-b629-cbbcfbff426c" />
+
+## Elton Baidoo A/B Test
+
+Profile Photo Placement
+User Story: US# ??? (Profile Screen - User views another user's profile)
+Metrics: 
+- Primary: Profile engagement time (seconds spent on profile)
+- Secondary: Profile completion rate for own profile
+- Tertiary: Connection request rate
+**Hypothesis**: 
+Having a large, prominent circular profile photo at the top center of the profile screen will result in greater user engagement and higher connection request rates compared to a smaller left-aligned photo with bio text beside it. We believe that a centered, large photo creates a stronger first impression and draws users' attention immediately, encouraging them to spend more time viewing the profile and initiating connections. The centered layout also creates a cleaner, more modern mobile-first design pattern that users are familiar with from other social/networking apps.
+
+**Experiment Details**:
+- **Duration**: 2 weeks minimum (to capture full user activity cycle)
+- **Sample Size**: 10-15% of active users will see Version B (variant)
+- **Audience Targeting**: All users viewing profiles (both new and existing users)
+- **Randomization**: Firebase will randomly assign users to see either Version A or Version B when viewing ANY profile
+- **Data Collection**: Firebase Analytics will track:
+  - Time spent on profile screen
+  - Scroll depth on profile
+  - Connection button taps
+  - Profile edit initiations (for own profile)
+  - Return visits to same profile
+
+**Variations**:
+
+ Version A (Control) - Large Centered Photo
+- Layout: 
+  - Profile photo: 120x120px circular image, centered at top
+  - Name and headline: Centered below photo
+  - Bio: Full-width text block below name
+  - Interests/tags: Below bio
+  - Action buttons: "Connect" button prominent below bio
+  
+- **Visual Hierarchy**: Photo → Name → Bio → Interests → Actions
+
+#### Version B (Variant) - Small Left-Aligned Photo with Side Bio
+- Layout:
+  - Profile photo: 80x80px circular image, aligned to left
+  - Name, headline, and first 2 lines of bio: Right side of photo
+  - Full bio: Below photo/name section
+  - Interests/tags: Below bio
+  - Action buttons: Same placement as Version A
+
+- **Visual Hierarchy**: Photo + Name/Bio (side-by-side) → Full Bio → Interests → Actions
+
+**Success Criteria**:
+- **Win**: Version that shows ≥10% improvement in connection request rate AND ≥5% improvement in avg. engagement time
+- **Statistical Significance**: p-value < 0.05
+- **Minimum Sample**: 500 profile views per variation
+
+**Expected Outcome**:
+Version A (large centered photo) will likely perform better because:
+1. Mobile users expect centered, prominent photos (Instagram, LinkedIn pattern)
+2. Larger photo creates emotional connection faster
+3. Simpler visual hierarchy = easier to scan
+4. More space for photo helps with facial recognition/trust
+
+However, Version B might win if:
+1. Users prefer information density (bio visible immediately)
+2. Smaller photo reduces page load time significantly
+3. Side-by-side layout works better on larger screens
+
+**Implementation Notes**:
+- Use Firebase Remote Config to toggle between layouts
+- Ensure both versions are mobile-responsive
+- Track A/B assignment in user properties for consistency (same user always sees same version)
+- Monitor for any bugs or UX issues specific to either version
+
+**Rollout Plan**:
+1. Week 1-2: Run experiment with 10-15% of users
+2. Analyze data after 2 weeks
+3. If winner is clear, gradually roll out to 50% → 100% over 1 week
+4. Monitor metrics for 1 week post-rollout to confirm sustained improvement
