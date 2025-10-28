@@ -97,3 +97,21 @@ However, Version B might win if:
 2. Analyze data after 2 weeks
 3. If winner is clear, gradually roll out to 50% → 100% over 1 week
 4. Monitor metrics for 1 week post-rollout to confirm sustained improvement
+
+## Jack Henderson A/B Test
+
+Test: Creating an efficient login system and page with functionality to sign in with Google or other services
+- User Story 7 (outside verification)
+  
+**Hypothesis:**
+- By giving users the option to use another service to authenticate their login details and accounts, it will drive more people to use the app
+- On top of this, by integrating an easy "share" feature on the app through other connected accounts, this can create publicity
+
+**Experiment Details:**
+- By keeping track of the amount of users using outside services for verification, we can see how popular the option is
+- Also keeping track of the posts going out from our app to keep track of the data we need
+
+**Variations:**
+- The biggest variation in this specific metric experiment would be if the feature would be popular or utilized at all
+- It is possible that users simply will not opt to share their translated documents or usage of the app, even if they like it
+- Or they won't share through the app itself, and just post about it manually on their other social media accounts, that may not be linked
