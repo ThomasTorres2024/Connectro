@@ -8,12 +8,12 @@ export 'api_manager.dart' show ApiCallResponse;
 
 const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
-class ZenQuotesQueryCall {
+class TemporaryAPICallCopyCall {
   static Future<ApiCallResponse> call({
     String? quote = '',
   }) async {
     return ApiManager.instance.makeApiCall(
-      callName: 'zenQuotesQuery',
+      callName: 'temporaryAPICall Copy',
       apiUrl: 'https://zenquotes.io/api/quotes/',
       callType: ApiCallType.GET,
       headers: {},
@@ -36,6 +36,41 @@ class ZenQuotesQueryCall {
           .map((x) => castToType<String>(x))
           .withoutNulls
           .toList();
+}
+
+class NewapicallCall {
+  static Future<ApiCallResponse> call({
+    dynamic companyInfoJson,
+    dynamic tasksJson,
+    dynamic clientInfoJson,
+    String? documentType = 'Invoice',
+  }) async {
+    final companyInfo = _serializeJson(companyInfoJson);
+    final tasks = _serializeJson(tasksJson, true);
+    final clientInfo = _serializeJson(clientInfoJson);
+    final ffApiRequestBody = '''
+{
+  "tasks": ${tasks},
+  "companyInfo": ${companyInfo},
+  "clientInfo": ${clientInfo},
+  "documentType": "${escapeStringForJson(documentType)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'newapicall',
+      apiUrl: 'https://on-request-example-3vwbwvc4yq-uc.a.run.app',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
 }
 
 class ApiPagingParams {
@@ -83,4 +118,15 @@ String _serializeJson(dynamic jsonVar, [bool isList = false]) {
     }
     return isList ? '[]' : '{}';
   }
+}
+
+String? escapeStringForJson(String? input) {
+  if (input == null) {
+    return null;
+  }
+  return input
+      .replaceAll('\\', '\\\\')
+      .replaceAll('"', '\\"')
+      .replaceAll('\n', '\\n')
+      .replaceAll('\t', '\\t');
 }

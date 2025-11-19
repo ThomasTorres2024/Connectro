@@ -1,15 +1,38 @@
 // Export pages
-export '/details/details_widget.dart' show DetailsWidget;
-export '/completed/completed_widget.dart' show CompletedWidget;
-export '/tasks/tasks_widget.dart' show TasksWidget;
+export '/todo_app_templates/details/details_widget.dart' show DetailsWidget;
+export '/misc_templates/list02_products/list02_products_widget.dart'
+    show List02ProductsWidget;
+export '/misc_templates/profile_alt/profile_alt_widget.dart'
+    show ProfileAltWidget;
+export '/edit_profile/edit_profile_widget.dart' show EditProfileWidget;
+export '/misc_templates/profile_alt_copy/profile_alt_copy_widget.dart'
+    show ProfileAltCopyWidget;
+export '/todo_app_templates/tasks/tasks_widget.dart' show TasksWidget;
+export '/todo_app_templates/completed/completed_widget.dart'
+    show CompletedWidget;
 export '/login/login_widget.dart' show LoginWidget;
-export '/onboarding/onboarding_widget.dart' show OnboardingWidget;
-export '/list02_products/list02_products_widget.dart' show List02ProductsWidget;
-export '/pages/translation_home/translation_home_widget.dart'
-    show TranslationHomeWidget;
-export '/pages/translation_copy/translation_copy_widget.dart'
-    show TranslationCopyWidget;
-export '/pages/confirm_translation/confirm_translation_widget.dart'
-    show ConfirmTranslationWidget;
-export '/pages/translation_receipts/translation_receipts_widget.dart'
+export '/task_creation/task_creation_widget.dart' show TaskCreationWidget;
+export '/task_list/task_list_widget.dart' show TaskListWidget;
+export '/translation_golden_path/translation_receipts/translation_receipts_widget.dart'
     show TranslationReceiptsWidget;
+export '/translation_golden_path/translation_add/translation_add_widget.dart'
+    show TranslationAddWidget;
+export '/translation_golden_path/add_document_info/add_company_info/add_company_info_widget.dart'
+    show AddCompanyInfoWidget;
+export '/translation_golden_path/add_client_info/add_client_info_widget.dart'
+    show AddClientInfoWidget;
+export '/settings/settings_widget.dart' show SettingsWidget;
+export '/onboarding/second_welcome/second_welcome_widget.dart'
+    show SecondWelcomeWidget;
+export '/onboarding/profile_setup/profile_setup_widget.dart'
+    show ProfileSetupWidget;
+export '/onboarding/first_welcome/first_welcome_widget.dart'
+    show FirstWelcomeWidget;
+export '/onboarding/fourth_welcome/fourth_welcome_widget.dart'
+    show FourthWelcomeWidget;
+export '/onboarding/profilesetup2/profilesetup2_widget.dart'
+    show Profilesetup2Widget;
+export '/translation_golden_path/add_document_info/business_name_and_destination_lang/business_name_and_destination_lang_widget.dart'
+    show BusinessNameAndDestinationLangWidget;
+export '/translation_golden_path/add_document_info/get_translated_document/get_translated_document_widget.dart'
+    show GetTranslatedDocumentWidget;

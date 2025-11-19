@@ -36,6 +36,7 @@ dependencies:
   cloud_firestore_web: 4.4.9
   collection: 1.19.1
   csslib: 1.0.2
+  dropdown_button2: 2.3.9
   easy_debounce: 2.0.1
   equatable: 2.0.7
   file_picker: 10.1.9
@@ -51,6 +52,9 @@ dependencies:
   firebase_performance: 0.10.1+7
   firebase_performance_platform_interface: 0.1.5+7
   firebase_performance_web: 0.1.7+13
+  firebase_remote_config: 5.4.5
+  firebase_remote_config_platform_interface: 1.5.5
+  firebase_remote_config_web: 1.8.5
   firebase_storage: 12.4.7
   firebase_storage_platform_interface: 5.2.7
   firebase_storage_web: 3.10.14
@@ -126,10 +130,23 @@ dependency_overrides:
   uuid: ^4.0.0
 
 dev_dependencies:
+  flutter_launcher_icons: 0.13.1
   flutter_lints: 4.0.0
+  image: 4.2.0
   lints: 4.0.0
   flutter_test:
     sdk: flutter
+
+
+flutter_launcher_icons:
+  android: 'launcher_icon'
+  ios: true
+  web:
+    generate: true
+  image_path: 'assets/images/app_launcher_icon.png'
+  adaptive_icon_background: '#00000000'
+  adaptive_icon_foreground: 'assets/images/adaptive_foreground_icon.png'
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -152,6 +169,7 @@ flutter:
     - assets/pdfs/
     - assets/jsons/
 
+    - assets/environment_values/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

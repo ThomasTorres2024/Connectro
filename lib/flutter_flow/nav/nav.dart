@@ -100,14 +100,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-            name: CompletedWidget.routeName,
-            path: CompletedWidget.routePath,
-            builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'completed')
-                : NavBarPage(
-                    initialPage: 'completed',
-                    page: CompletedWidget(),
-                  )),
+          name: List02ProductsWidget.routeName,
+          path: List02ProductsWidget.routePath,
+          builder: (context, params) => List02ProductsWidget(),
+        ),
+        FFRoute(
+          name: ProfileAltWidget.routeName,
+          path: ProfileAltWidget.routePath,
+          builder: (context, params) => ProfileAltWidget(),
+        ),
+        FFRoute(
+          name: EditProfileWidget.routeName,
+          path: EditProfileWidget.routePath,
+          builder: (context, params) => EditProfileWidget(),
+        ),
+        FFRoute(
+          name: ProfileAltCopyWidget.routeName,
+          path: ProfileAltCopyWidget.routePath,
+          builder: (context, params) => ProfileAltCopyWidget(),
+        ),
         FFRoute(
             name: TasksWidget.routeName,
             path: TasksWidget.routePath,
@@ -118,39 +129,135 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     page: TasksWidget(),
                   )),
         FFRoute(
+            name: CompletedWidget.routeName,
+            path: CompletedWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'completed')
+                : NavBarPage(
+                    initialPage: 'completed',
+                    page: CompletedWidget(),
+                  )),
+        FFRoute(
           name: LoginWidget.routeName,
           path: LoginWidget.routePath,
           builder: (context, params) => LoginWidget(),
         ),
         FFRoute(
-          name: OnboardingWidget.routeName,
-          path: OnboardingWidget.routePath,
-          builder: (context, params) => OnboardingWidget(),
+          name: TaskCreationWidget.routeName,
+          path: TaskCreationWidget.routePath,
+          builder: (context, params) => TaskCreationWidget(),
         ),
         FFRoute(
-          name: List02ProductsWidget.routeName,
-          path: List02ProductsWidget.routePath,
-          builder: (context, params) => List02ProductsWidget(),
-        ),
-        FFRoute(
-          name: TranslationHomeWidget.routeName,
-          path: TranslationHomeWidget.routePath,
-          builder: (context, params) => TranslationHomeWidget(),
-        ),
-        FFRoute(
-          name: TranslationCopyWidget.routeName,
-          path: TranslationCopyWidget.routePath,
-          builder: (context, params) => TranslationCopyWidget(),
-        ),
-        FFRoute(
-          name: ConfirmTranslationWidget.routeName,
-          path: ConfirmTranslationWidget.routePath,
-          builder: (context, params) => ConfirmTranslationWidget(),
+          name: TaskListWidget.routeName,
+          path: TaskListWidget.routePath,
+          builder: (context, params) => TaskListWidget(),
         ),
         FFRoute(
           name: TranslationReceiptsWidget.routeName,
           path: TranslationReceiptsWidget.routePath,
           builder: (context, params) => TranslationReceiptsWidget(),
+        ),
+        FFRoute(
+          name: TranslationAddWidget.routeName,
+          path: TranslationAddWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'TranslationAdd')
+              : TranslationAddWidget(),
+        ),
+        FFRoute(
+          name: AddCompanyInfoWidget.routeName,
+          path: AddCompanyInfoWidget.routePath,
+          builder: (context, params) => AddCompanyInfoWidget(
+            documentType: params.getParam(
+              'documentType',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: AddClientInfoWidget.routeName,
+          path: AddClientInfoWidget.routePath,
+          builder: (context, params) => AddClientInfoWidget(
+            documentType: params.getParam(
+              'documentType',
+              ParamType.String,
+            ),
+            companyInfo: params.getParam(
+              'companyInfo',
+              ParamType.JSON,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: SettingsWidget.routeName,
+          path: SettingsWidget.routePath,
+          builder: (context, params) => SettingsWidget(),
+        ),
+        FFRoute(
+          name: SecondWelcomeWidget.routeName,
+          path: SecondWelcomeWidget.routePath,
+          builder: (context, params) => SecondWelcomeWidget(),
+        ),
+        FFRoute(
+          name: ProfileSetupWidget.routeName,
+          path: ProfileSetupWidget.routePath,
+          builder: (context, params) => ProfileSetupWidget(),
+        ),
+        FFRoute(
+          name: FirstWelcomeWidget.routeName,
+          path: FirstWelcomeWidget.routePath,
+          builder: (context, params) => FirstWelcomeWidget(),
+        ),
+        FFRoute(
+          name: FourthWelcomeWidget.routeName,
+          path: FourthWelcomeWidget.routePath,
+          builder: (context, params) => FourthWelcomeWidget(),
+        ),
+        FFRoute(
+          name: Profilesetup2Widget.routeName,
+          path: Profilesetup2Widget.routePath,
+          builder: (context, params) => Profilesetup2Widget(),
+        ),
+        FFRoute(
+          name: BusinessNameAndDestinationLangWidget.routeName,
+          path: BusinessNameAndDestinationLangWidget.routePath,
+          builder: (context, params) => BusinessNameAndDestinationLangWidget(
+            documentType: params.getParam(
+              'documentType',
+              ParamType.String,
+            ),
+            clientInfo: params.getParam(
+              'clientInfo',
+              ParamType.JSON,
+            ),
+            companyInfo: params.getParam(
+              'companyInfo',
+              ParamType.JSON,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: GetTranslatedDocumentWidget.routeName,
+          path: GetTranslatedDocumentWidget.routePath,
+          builder: (context, params) => GetTranslatedDocumentWidget(
+            companyInfo: params.getParam(
+              'companyInfo',
+              ParamType.JSON,
+            ),
+            clientInfo: params.getParam(
+              'clientInfo',
+              ParamType.JSON,
+            ),
+            tasksInfo: params.getParam<dynamic>(
+              'tasksInfo',
+              ParamType.JSON,
+              isList: true,
+            ),
+            documentType: params.getParam(
+              'documentType',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

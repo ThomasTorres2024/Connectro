@@ -56,20 +56,16 @@ abstract class FlutterFlowTheme {
   late Color error;
   late Color info;
 
-  late Color customColor1;
-  late Color customColor2;
-  late Color blue;
-  late Color green;
-  late Color background;
-  late Color customColor3;
-  late Color customColor4;
-  late Color customColor5;
   late Color customColor6;
   late Color m3SysLightBackground;
   late Color m3SysLightOnSurface;
   late Color m3SysLightOnErrorContainer;
-  late Color m3SysLightPrimary;
   late Color m3SysLightSurface;
+  late Color tomato;
+  late Color oxfordBlue;
+  late Color white;
+  late Color slateGray;
+  late Color bole;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -157,9 +153,9 @@ class LightModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF89DC8C);
-  late Color secondary = const Color(0xFF5794F2);
-  late Color tertiary = const Color(0xFFEE8B60);
+  late Color primary = const Color(0xFFFF6A3D);
+  late Color secondary = const Color(0xFF0A1F44);
+  late Color tertiary = const Color(0xFFFFFFFF);
   late Color alternate = const Color(0xFFE0E3E7);
   late Color primaryText = const Color(0xFF14181B);
   late Color secondaryText = const Color(0xFF57636C);
@@ -174,20 +170,16 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
 
-  late Color customColor1 = const Color(0xFF242424);
-  late Color customColor2 = const Color(0xFF89DC8C);
-  late Color blue = const Color(0xFF5794F2);
-  late Color green = const Color(0xFF89DC8C);
-  late Color background = const Color(0xFFF5F5F5);
-  late Color customColor3 = const Color(0xFF852221);
-  late Color customColor4 = const Color(0xFFF3F3F3);
-  late Color customColor5 = const Color(0xFF6750A4);
   late Color customColor6 = const Color(0xFFFEF7FF);
   late Color m3SysLightBackground = const Color(0xFFFEF7FF);
   late Color m3SysLightOnSurface = const Color(0xFF1D1B20);
   late Color m3SysLightOnErrorContainer = const Color(0xFF852221);
-  late Color m3SysLightPrimary = const Color(0xFF6750A4);
   late Color m3SysLightSurface = const Color(0xFFFEF7FF);
+  late Color tomato = const Color(0xFFFF6A3D);
+  late Color oxfordBlue = const Color(0xFF0A1F44);
+  late Color white = const Color(0xFFFFFFFF);
+  late Color slateGray = const Color(0xFF788AA3);
+  late Color bole = const Color(0xFF764134);
 }
 
 abstract class Typography {
@@ -358,9 +350,9 @@ class DarkModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF89DC8C);
-  late Color secondary = const Color(0xFF5794F2);
-  late Color tertiary = const Color(0xFFEE8B60);
+  late Color primary = const Color(0xFFFF6A3D);
+  late Color secondary = const Color(0xFF0A1F44);
+  late Color tertiary = const Color(0xFFFFFFFF);
   late Color alternate = const Color(0xFF262D34);
   late Color primaryText = const Color(0xFFFFFFFF);
   late Color secondaryText = const Color(0xFF95A1AC);
@@ -375,20 +367,16 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
 
-  late Color customColor1 = const Color(0xFF242424);
-  late Color customColor2 = const Color(0xFF89DC8C);
-  late Color blue = const Color(0xFF5794F2);
-  late Color green = const Color(0xFF89DC8C);
-  late Color background = const Color(0xFFF5F5F5);
-  late Color customColor3 = const Color(0xFF852221);
-  late Color customColor4 = const Color(0xFFF3F3F3);
-  late Color customColor5 = const Color(0xFF6750A4);
   late Color customColor6 = const Color(0xFFFEF7FF);
   late Color m3SysLightBackground = const Color(0xFFFEF7FF);
   late Color m3SysLightOnSurface = const Color(0xFF1D1B20);
   late Color m3SysLightOnErrorContainer = const Color(0xFF852221);
-  late Color m3SysLightPrimary = const Color(0xFF6750A4);
   late Color m3SysLightSurface = const Color(0xFFFEF7FF);
+  late Color tomato = const Color(0xFFFF6A3D);
+  late Color oxfordBlue = const Color(0xFF0A1F44);
+  late Color white = const Color(0xFFFFFFFF);
+  late Color slateGray = const Color(0xFF788AA3);
+  late Color bole = const Color(0xFF764134);
 }
 
 extension TextStyleHelper on TextStyle {

@@ -10,7 +10,8 @@ Future initFirebase() async {
             projectId: "connectro2-2vk0qy",
             storageBucket: "connectro2-2vk0qy.firebasestorage.app",
             messagingSenderId: "375841187449",
-            appId: "1:375841187449:web:a8f2f3fb7cd0ca873e16a8"));
+            appId: "1:375841187449:web:a8f2f3fb7cd0ca873e16a8",
+            measurementId: "G-YC4RZ53SY0"));
   } else {
     await Firebase.initializeApp();
   }

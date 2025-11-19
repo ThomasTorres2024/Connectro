@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -74,7 +73,7 @@ class _LoginWidgetState extends State<LoginWidget>
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Colors.white,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(70.0),
           child: AppBar(
@@ -903,7 +902,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                             }
 
                                             context.goNamedAuth(
-                                                TasksWidget.routeName,
+                                                TranslationAddWidget.routeName,
                                                 context.mounted);
                                           },
                                           autofocus: false,
@@ -1077,7 +1076,7 @@ class _LoginWidgetState extends State<LoginWidget>
                     Align(
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
-                        '-----------OR-----------',
+                        'OR',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
                                 fontWeight: FlutterFlowTheme.of(context)
@@ -1170,26 +1169,6 @@ class _LoginWidgetState extends State<LoginWidget>
                                     !_model.formKey1.currentState!.validate()) {
                                   return;
                                 }
-                                logFirebaseEvent('Login-Button_backend_call');
-                                _model.apiResultv0i =
-                                    await ZenQuotesQueryCall.call();
-
-                                if ((_model.apiResultv0i?.succeeded ?? true)) {
-                                  logFirebaseEvent(
-                                      'Login-Button_update_app_state');
-                                  FFAppState().zenQuote = getJsonField(
-                                    (_model.apiResultv0i?.jsonBody ?? ''),
-                                    r'''$[0]['q']''',
-                                  ).toString();
-                                  safeSetState(() {});
-                                } else {
-                                  logFirebaseEvent(
-                                      'Login-Button_update_app_state');
-                                  FFAppState().zenQuote =
-                                      'This is a default zen quote if the API fails.';
-                                  safeSetState(() {});
-                                }
-
                                 logFirebaseEvent('Login-Button_auth');
                                 GoRouter.of(context).prepareAuthEvent();
 
@@ -1203,9 +1182,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                 }
 
                                 context.goNamedAuth(
-                                    TasksWidget.routeName, context.mounted);
-
-                                safeSetState(() {});
+                                    TranslationAddWidget.routeName,
+                                    context.mounted);
                               },
                               text: 'Login',
                               options: FFButtonOptions(
@@ -1293,7 +1271,8 @@ class _LoginWidgetState extends State<LoginWidget>
 
                                 logFirebaseEvent('Signup-Button_navigate_to');
 
-                                context.goNamedAuth(OnboardingWidget.routeName,
+                                context.goNamedAuth(
+                                    ProfileSetupWidget.routeName,
                                     context.mounted);
                               },
                               text: 'Sign Up',

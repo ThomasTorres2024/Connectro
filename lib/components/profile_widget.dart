@@ -1,5 +1,8 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'profile_model.dart';
@@ -56,7 +59,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 width: double.infinity,
                 height: 424.91,
                 decoration: BoxDecoration(
-                  color: Color(0xFF161723),
+                  color: Color(0xFFFF4A12),
                   borderRadius: BorderRadius.circular(40.0),
                 ),
                 child: Padding(
@@ -124,63 +127,80 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 2.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Name',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyLarge
-                                  .override(
-                                    font: GoogleFonts.inter(
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            logFirebaseEvent(
+                                'PROFILE_COMP_Row_4oewlcyi_ON_TAP');
+                            logFirebaseEvent('Row_backend_call');
+
+                            await currentUserReference!
+                                .update(createUsersRecordData(
+                              displayName: '',
+                            ));
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Name',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FontWeight.normal,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .fontStyle,
+                                      ),
+                                      color: Color(0xFF080606),
+                                      fontSize: 18.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.normal,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .fontStyle,
                                     ),
-                                    color: Color(0xFF080606),
-                                    fontSize: 18.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Text(
+                                    'connectro',
+                                    style: FlutterFlowTheme.of(context)
                                         .bodyLarge
-                                        .fontStyle,
-                                  ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Text(
-                                  'connectro',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyLarge
-                                      .override(
-                                        font: GoogleFonts.inter(
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight: FontWeight.normal,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyLarge
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xFF252020),
+                                          fontSize: 18.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.normal,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyLarge
                                                   .fontStyle,
                                         ),
-                                        color: Color(0xFF252020),
-                                        fontSize: 18.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.normal,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyLarge
-                                            .fontStyle,
-                                      ),
-                                ),
-                                Icon(
-                                  Icons.chevron_right,
-                                  color: Color(0xFFDFE1F8),
-                                  size: 24.0,
-                                ),
-                              ].divide(SizedBox(width: 8.0)),
-                            ),
-                          ],
+                                  ),
+                                  Icon(
+                                    Icons.chevron_right,
+                                    color: Color(0xFFDFE1F8),
+                                    size: 24.0,
+                                  ),
+                                ].divide(SizedBox(width: 8.0)),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -415,7 +435,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   width: double.infinity,
                   height: 100.0,
                   decoration: BoxDecoration(
-                    color: Color(0xFF161723),
+                    color: Color(0xFFFF4A12),
                     borderRadius: BorderRadius.circular(40.0),
                   ),
                   child: Padding(
@@ -426,26 +446,51 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.arrow_back,
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          size: 32.0,
-                        ),
-                        Container(
-                          width: 50.0,
-                          height: 50.0,
-                          decoration: BoxDecoration(
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            logFirebaseEvent(
+                                'PROFILE_COMP_Icon_mtdisgxi_ON_TAP');
+                            logFirebaseEvent('Icon_navigate_back');
+                            context.safePop();
+                          },
+                          child: Icon(
+                            Icons.arrow_back,
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            shape: BoxShape.circle,
+                            size: 32.0,
                           ),
-                          child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
-                            child: Icon(
-                              Icons.account_circle,
-                              color: Color(0xFF161723),
-                              size: 24.0,
+                        ),
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            logFirebaseEvent(
+                                'PROFILE_COMP_Container_d8sw4r06_ON_TAP');
+                            logFirebaseEvent('Container_navigate_to');
+
+                            context.pushNamed(EditProfileWidget.routeName);
+                          },
+                          child: Container(
+                            width: 50.0,
+                            height: 50.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Icon(
+                                Icons.account_circle,
+                                color: Color(0xFF161723),
+                                size: 24.0,
+                              ),
                             ),
                           ),
                         ),
