@@ -1,0 +1,8 @@
+# PERSONA 1 - Native Spanish Speaker  
+- https://docs.google.com/presentation/d/1h7zeYZBURkxmFVVfYz_Kmpm1jCmeHMKsG5UFQsvHQMc/edit?usp=sharing (Jack)
+# PERSONA 2 - Native Portuguese Speaker 
+- https://docs.google.com/presentation/d/1CstHngwOAa9VNVWUkI0Bu7MZFLsSFfJocYgDlfp2J-g/edit?slide=id.g38c74708212_0_5#slide=id.g38c74708212_0_5 (Greg)
+# PERSONA 3 - Native Ukrainian Speaker 
+- https://docs.google.com/presentation/d/1m292CM9OuMCXfGrOf8027wXENnTvB88y9c-uhJO3iSU/edit?usp=sharing (Elton)
+# PERSONA 4 - Home Improvement Company Owners
+- https://docs.google.com/presentation/d/1K9_nREtLnchQXO5_22uspGDDl6EGqmA3W6F8aGnkN4E/edit?usp=sharing (Thomas)
