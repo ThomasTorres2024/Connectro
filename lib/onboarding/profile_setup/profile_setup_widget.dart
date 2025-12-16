@@ -2,7 +2,6 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -184,47 +183,6 @@ class _ProfileSetupWidgetState extends State<ProfileSetupWidget> {
                                 ),
                               ],
                             ),
-                          ),
-                          Stack(
-                            alignment: AlignmentDirectional(-1.0, 1.0),
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    8.0, 0.0, 8.0, 8.0),
-                                child: Container(
-                                  width: 68.0,
-                                  height: 68.0,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: Image.network(
-                                        _model.uploadedFileUrl_profilePhoto,
-                                      ).image,
-                                    ),
-                                    borderRadius: BorderRadius.circular(68.0),
-                                    border: Border.all(
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              FlutterFlowIconButton(
-                                borderColor: Colors.black,
-                                borderRadius: 20.0,
-                                buttonSize: 37.0,
-                                fillColor: Colors.white,
-                                icon: Icon(
-                                  Icons.add_rounded,
-                                  color: Color(0xFF080000),
-                                  size: 21.0,
-                                ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
-                                },
-                              ),
-                            ],
                           ),
                           Container(
                             width: double.infinity,

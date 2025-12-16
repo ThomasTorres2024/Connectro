@@ -1,6 +1,7 @@
 import '/backend/api_requests/api_calls.dart';
 import '/components/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'get_translated_document_widget.dart' show GetTranslatedDocumentWidget;
 import 'package:flutter/material.dart';
 

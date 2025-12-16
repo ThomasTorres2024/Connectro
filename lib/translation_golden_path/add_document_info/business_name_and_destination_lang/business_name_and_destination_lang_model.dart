@@ -33,8 +33,6 @@ class BusinessNameAndDestinationLangModel
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
-  // Stores action output result for [Bottom Sheet - addDocumentTasks] action in IconButton widget.
-  dynamic newUserTask;
 
   @override
   void initState(BuildContext context) {}

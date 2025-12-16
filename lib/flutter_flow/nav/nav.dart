@@ -72,19 +72,21 @@ class AppStateNotifier extends ChangeNotifier {
   }
 }
 
-GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
+GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
+    GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+          appStateNotifier.loggedIn ? entryPage ?? NavBarPage() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? entryPage ?? NavBarPage()
+              : LoginWidget(),
         ),
         FFRoute(
           name: DetailsWidget.routeName,
@@ -120,22 +122,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ProfileAltCopyWidget(),
         ),
         FFRoute(
-            name: TasksWidget.routeName,
-            path: TasksWidget.routePath,
+            name: AllTranslatedDocumentsWidget.routeName,
+            path: AllTranslatedDocumentsWidget.routePath,
             builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'tasks')
+                ? NavBarPage(initialPage: 'AllTranslatedDocuments')
                 : NavBarPage(
-                    initialPage: 'tasks',
-                    page: TasksWidget(),
-                  )),
-        FFRoute(
-            name: CompletedWidget.routeName,
-            path: CompletedWidget.routePath,
-            builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'completed')
-                : NavBarPage(
-                    initialPage: 'completed',
-                    page: CompletedWidget(),
+                    initialPage: 'AllTranslatedDocuments',
+                    page: AllTranslatedDocumentsWidget(),
                   )),
         FFRoute(
           name: LoginWidget.routeName,
@@ -151,18 +144,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: TaskListWidget.routeName,
           path: TaskListWidget.routePath,
           builder: (context, params) => TaskListWidget(),
-        ),
-        FFRoute(
-          name: TranslationReceiptsWidget.routeName,
-          path: TranslationReceiptsWidget.routePath,
-          builder: (context, params) => TranslationReceiptsWidget(),
-        ),
-        FFRoute(
-          name: TranslationAddWidget.routeName,
-          path: TranslationAddWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'TranslationAdd')
-              : TranslationAddWidget(),
         ),
         FFRoute(
           name: AddCompanyInfoWidget.routeName,
@@ -217,6 +198,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: Profilesetup2Widget.routeName,
           path: Profilesetup2Widget.routePath,
           builder: (context, params) => Profilesetup2Widget(),
+        ),
+        FFRoute(
+          name: TranslationAddWidget.routeName,
+          path: TranslationAddWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'TranslationAdd')
+              : TranslationAddWidget(),
         ),
         FFRoute(
           name: BusinessNameAndDestinationLangWidget.routeName,

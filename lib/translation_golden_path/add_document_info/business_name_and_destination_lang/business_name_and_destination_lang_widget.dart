@@ -11,6 +11,7 @@ import '/translation_golden_path/add_document_info/add_document_tasks/add_docume
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'business_name_and_destination_lang_model.dart';
 export 'business_name_and_destination_lang_model.dart';
 
@@ -62,6 +63,8 @@ class _BusinessNameAndDestinationLangWidgetState
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -417,15 +420,7 @@ class _BusinessNameAndDestinationLangWidgetState
                                   ),
                                 );
                               },
-                            ).then((value) =>
-                                safeSetState(() => _model.newUserTask = value));
-
-                            logFirebaseEvent('IconButton_update_page_state');
-                            _model.addToUserDocumentTasksList(
-                                _model.newUserTask!);
-                            safeSetState(() {});
-
-                            safeSetState(() {});
+                            ).then((value) => safeSetState(() {}));
                           },
                         ),
                       ],
@@ -505,7 +500,7 @@ class _BusinessNameAndDestinationLangWidgetState
                                     ParamType.JSON,
                                   ),
                                   'tasksInfo': serializeParam(
-                                    _model.userDocumentTasksList,
+                                    FFAppState().taskListJSON,
                                     ParamType.JSON,
                                     isList: true,
                                   ),

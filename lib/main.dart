@@ -36,12 +36,16 @@ void main() async {
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key, this.entryPage});
+
   // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
 
   static _MyAppState of(BuildContext context) =>
       context.findAncestorStateOfType<_MyAppState>()!;
+
+  final Widget? entryPage;
 }
 
 class MyAppScrollBehavior extends MaterialScrollBehavior {
@@ -79,7 +83,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
 
     _appStateNotifier = AppStateNotifier.instance;
-    _router = createRouter(_appStateNotifier);
+    _router = createRouter(_appStateNotifier, widget.entryPage);
     userStream = connectro2FirebaseUserStream()
       ..listen((user) {
         _appStateNotifier.update(user);
@@ -160,9 +164,8 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'completed': CompletedWidget(),
       'TranslationAdd': TranslationAddWidget(),
-      'tasks': TasksWidget(),
+      'AllTranslatedDocuments': AllTranslatedDocumentsWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -182,14 +185,6 @@ class _NavBarPageState extends State<NavBarPage> {
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.checklist_rounded,
-              size: 30.0,
-            ),
-            label: 'Home',
-            tooltip: '',
-          ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home_outlined,

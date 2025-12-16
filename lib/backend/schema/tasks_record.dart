@@ -40,12 +40,24 @@ class TasksRecord extends FirestoreRecord {
   DateTime? get created => _created;
   bool hasCreated() => _created != null;
 
+  // "price" field.
+  int? _price;
+  int get price => _price ?? 0;
+  bool hasPrice() => _price != null;
+
+  // "quantity" field.
+  int? _quantity;
+  int get quantity => _quantity ?? 0;
+  bool hasQuantity() => _quantity != null;
+
   void _initializeFields() {
     _title = snapshotData['title'] as String?;
     _completed = snapshotData['completed'] as bool?;
     _details = snapshotData['details'] as String?;
     _user = snapshotData['user'] as DocumentReference?;
     _created = snapshotData['created'] as DateTime?;
+    _price = castToType<int>(snapshotData['price']);
+    _quantity = castToType<int>(snapshotData['quantity']);
   }
 
   static CollectionReference get collection =>
@@ -87,6 +99,8 @@ Map<String, dynamic> createTasksRecordData({
   String? details,
   DocumentReference? user,
   DateTime? created,
+  int? price,
+  int? quantity,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -95,6 +109,8 @@ Map<String, dynamic> createTasksRecordData({
       'details': details,
       'user': user,
       'created': created,
+      'price': price,
+      'quantity': quantity,
     }.withoutNulls,
   );
 
@@ -110,12 +126,21 @@ class TasksRecordDocumentEquality implements Equality<TasksRecord> {
         e1?.completed == e2?.completed &&
         e1?.details == e2?.details &&
         e1?.user == e2?.user &&
-        e1?.created == e2?.created;
+        e1?.created == e2?.created &&
+        e1?.price == e2?.price &&
+        e1?.quantity == e2?.quantity;
   }
 
   @override
-  int hash(TasksRecord? e) => const ListEquality()
-      .hash([e?.title, e?.completed, e?.details, e?.user, e?.created]);
+  int hash(TasksRecord? e) => const ListEquality().hash([
+        e?.title,
+        e?.completed,
+        e?.details,
+        e?.user,
+        e?.created,
+        e?.price,
+        e?.quantity
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is TasksRecord;

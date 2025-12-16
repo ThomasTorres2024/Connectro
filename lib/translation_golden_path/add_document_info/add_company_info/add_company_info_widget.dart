@@ -2,7 +2,7 @@ import '/components/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/translation_golden_path/add_document_info/confirm_company_info/confirm_company_info_widget.dart';
+import '/translation_golden_path/confirm_company_info/confirm_company_info_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:flutter/material.dart';

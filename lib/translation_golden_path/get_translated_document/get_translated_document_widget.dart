@@ -1,9 +1,12 @@
 import '/backend/api_requests/api_calls.dart';
+import '/backend/backend.dart';
 import '/components/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'get_translated_document_model.dart';
 export 'get_translated_document_model.dart';
@@ -78,7 +81,7 @@ class _GetTranslatedDocumentWidgetState
                   size: 24.0,
                 ),
                 Text(
-                  'Add Document',
+                  'Confirm Translation',
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         font: GoogleFonts.inter(
                           fontWeight: FontWeight.normal,
@@ -116,7 +119,7 @@ class _GetTranslatedDocumentWidgetState
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'List of Added Documents',
+                        'Document Status',
                         style: GoogleFonts.roboto(
                           color: FlutterFlowTheme.of(context).secondary,
                           fontSize: 30.0,
@@ -179,6 +182,13 @@ class _GetTranslatedDocumentWidgetState
                               _model.awaitedTranslationLink =
                                   (_model.linkName?.bodyText ?? '');
                               safeSetState(() {});
+                              logFirebaseEvent('Button_backend_call');
+
+                              await UserGeneratedDocumentRecord.collection
+                                  .doc()
+                                  .set(createUserGeneratedDocumentRecordData(
+                                    documentName: _model.awaitedTranslationLink,
+                                  ));
                             } else {
                               logFirebaseEvent('Button_update_page_state');
                               _model.awaitedTranslationLink =
@@ -191,6 +201,147 @@ class _GetTranslatedDocumentWidgetState
                           text: 'Create New Document',
                           icon: Icon(
                             Icons.file_upload,
+                            size: 15.0,
+                          ),
+                          options: FFButtonOptions(
+                            width: 300.0,
+                            height: 40.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).primary,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FontWeight.normal,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
+                                  color: FlutterFlowTheme.of(context).secondary,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.normal,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
+                                ),
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              width: 50.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            logFirebaseEvent(
+                                'GET_TRANSLATED_DOCUMENT_OPEN_DOCUMENT_BT');
+                            logFirebaseEvent('Button_launch_u_r_l');
+                            await launchURL(_model.awaitedTranslationLink);
+                          },
+                          text: 'Open Document',
+                          icon: Icon(
+                            Icons.content_copy,
+                            size: 15.0,
+                          ),
+                          options: FFButtonOptions(
+                            width: 300.0,
+                            height: 40.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).primary,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FontWeight.normal,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
+                                  color: FlutterFlowTheme.of(context).secondary,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.normal,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
+                                ),
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              width: 50.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            logFirebaseEvent(
+                                'GET_TRANSLATED_DOCUMENT_COPY_LINK_BTN_ON');
+                            logFirebaseEvent('Button_copy_to_clipboard');
+                            await Clipboard.setData(ClipboardData(
+                                text: _model.awaitedTranslationLink));
+                          },
+                          text: 'Copy Link',
+                          icon: Icon(
+                            Icons.content_copy,
+                            size: 15.0,
+                          ),
+                          options: FFButtonOptions(
+                            width: 300.0,
+                            height: 40.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).primary,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FontWeight.normal,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
+                                  color: FlutterFlowTheme.of(context).secondary,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.normal,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
+                                ),
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              width: 50.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            logFirebaseEvent(
+                                'GET_TRANSLATED_DOCUMENT_ALL_DOCUMENTS_BT');
+                            logFirebaseEvent('Button_navigate_to');
+
+                            context.pushNamed(
+                                AllTranslatedDocumentsWidget.routeName);
+                          },
+                          text: 'All Documents',
+                          icon: Icon(
+                            Icons.cloud,
                             size: 15.0,
                           ),
                           options: FFButtonOptions(

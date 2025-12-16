@@ -1,5 +1,6 @@
 // Export pages
-export '/todo_app_templates/details/details_widget.dart' show DetailsWidget;
+export '/translation_golden_path/details/details_widget.dart'
+    show DetailsWidget;
 export '/misc_templates/list02_products/list02_products_widget.dart'
     show List02ProductsWidget;
 export '/misc_templates/profile_alt/profile_alt_widget.dart'
@@ -7,16 +8,11 @@ export '/misc_templates/profile_alt/profile_alt_widget.dart'
 export '/edit_profile/edit_profile_widget.dart' show EditProfileWidget;
 export '/misc_templates/profile_alt_copy/profile_alt_copy_widget.dart'
     show ProfileAltCopyWidget;
-export '/todo_app_templates/tasks/tasks_widget.dart' show TasksWidget;
-export '/todo_app_templates/completed/completed_widget.dart'
-    show CompletedWidget;
+export '/translation_golden_path/all_translated_documents/all_translated_documents_widget.dart'
+    show AllTranslatedDocumentsWidget;
 export '/login/login_widget.dart' show LoginWidget;
 export '/task_creation/task_creation_widget.dart' show TaskCreationWidget;
 export '/task_list/task_list_widget.dart' show TaskListWidget;
-export '/translation_golden_path/translation_receipts/translation_receipts_widget.dart'
-    show TranslationReceiptsWidget;
-export '/translation_golden_path/translation_add/translation_add_widget.dart'
-    show TranslationAddWidget;
 export '/translation_golden_path/add_document_info/add_company_info/add_company_info_widget.dart'
     show AddCompanyInfoWidget;
 export '/translation_golden_path/add_client_info/add_client_info_widget.dart'
@@ -32,7 +28,9 @@ export '/onboarding/fourth_welcome/fourth_welcome_widget.dart'
     show FourthWelcomeWidget;
 export '/onboarding/profilesetup2/profilesetup2_widget.dart'
     show Profilesetup2Widget;
+export '/translation_golden_path/translation_add/translation_add_widget.dart'
+    show TranslationAddWidget;
 export '/translation_golden_path/add_document_info/business_name_and_destination_lang/business_name_and_destination_lang_widget.dart'
     show BusinessNameAndDestinationLangWidget;
-export '/translation_golden_path/add_document_info/get_translated_document/get_translated_document_widget.dart'
+export '/translation_golden_path/get_translated_document/get_translated_document_widget.dart'
     show GetTranslatedDocumentWidget;

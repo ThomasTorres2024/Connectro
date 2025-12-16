@@ -1,4 +1,3 @@
-import '/components/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
 import 'translation_add_widget.dart' show TranslationAddWidget;
@@ -36,16 +35,10 @@ class TranslationAddModel extends FlutterFlowModel<TranslationAddWidget> {
 
   // Stores action output result for [Bottom Sheet - SelectDocumentType] action in Button widget.
   String? documentType;
-  // Model for navbar component.
-  late NavbarModel navbarModel;
 
   @override
-  void initState(BuildContext context) {
-    navbarModel = createModel(context, () => NavbarModel());
-  }
+  void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    navbarModel.dispose();
-  }
+  void dispose() {}
 }

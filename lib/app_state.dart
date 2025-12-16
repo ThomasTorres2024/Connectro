@@ -25,4 +25,33 @@ class FFAppState extends ChangeNotifier {
   set zenQuote(String value) {
     _zenQuote = value;
   }
+
+  List<dynamic> _taskListJSON = [];
+  List<dynamic> get taskListJSON => _taskListJSON;
+  set taskListJSON(List<dynamic> value) {
+    _taskListJSON = value;
+  }
+
+  void addToTaskListJSON(dynamic value) {
+    taskListJSON.add(value);
+  }
+
+  void removeFromTaskListJSON(dynamic value) {
+    taskListJSON.remove(value);
+  }
+
+  void removeAtIndexFromTaskListJSON(int index) {
+    taskListJSON.removeAt(index);
+  }
+
+  void updateTaskListJSONAtIndex(
+    int index,
+    dynamic Function(dynamic) updateFn,
+  ) {
+    taskListJSON[index] = updateFn(_taskListJSON[index]);
+  }
+
+  void insertAtIndexInTaskListJSON(int index, dynamic value) {
+    taskListJSON.insert(index, value);
+  }
 }
