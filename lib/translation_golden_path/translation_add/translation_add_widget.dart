@@ -359,6 +359,7 @@ class _TranslationAddWidgetState extends State<TranslationAddWidget> {
                         Align(
                           alignment: AlignmentDirectional(0.0, 0.0),
                           child: FFButtonWidget(
+                            key: ValueKey('Button_5u8o'),
                             onPressed: () async {
                               logFirebaseEvent(
                                   'TRANSLATION_ADD_PAGE_LOGOUT_BTN_ON_TAP');

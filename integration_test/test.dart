@@ -34,7 +34,7 @@ void main() async {
     await appState.initializePersistedState();
   });
 
-  testWidgets('US2 User Login', (WidgetTester tester) async {
+  testWidgets('US2 User Signup', (WidgetTester tester) async {
     _overrideOnError();
 
     await tester.pumpWidget(ChangeNotifierProvider(
@@ -46,14 +46,29 @@ void main() async {
     await GoogleFonts.pendingFonts();
 
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const ValueKey('LoginTab_qcnq')));
+    await tester.enterText(find.byKey(const ValueKey('Signup-Email_6ola')),
+        'johnpork676141@gmail.com');
+    await tester.enterText(find.byKey(const ValueKey('Signup-Password_r2hf')),
+        'johnpork676141@gmail.com');
     await tester.enterText(
-        find.byKey(const ValueKey('Login-Email_k1ry')), 'johnpork67@gmail.com');
-    await tester.enterText(find.byKey(const ValueKey('Login-Password_t0pw')),
-        'johnpork67@gmail.com');
+        find.byKey(const ValueKey('Signup-ConfirmPassword_ho75')),
+        'Hello World');
     await tester.tap(find.byKey(const ValueKey('Signup-Button_gp6i')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 3000));
-    expect(find.byKey(const ValueKey('TranslationAdd_11l6')), findsOneWidget);
+    await tester.enterText(
+        find.byKey(const ValueKey('Signup-ConfirmPassword_ho75')),
+        'johnpork676141@gmail.com');
+    await tester.tap(find.byKey(const ValueKey('Signup-Button_gp6i')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('Button_5u8o')));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byKey(const ValueKey('Signup-Email_6ola')),
+        'johnpork676141@gmail.com');
+    await tester.enterText(find.byKey(const ValueKey('Signup-Password_r2hf')),
+        'johnpork676141@gmail.com');
+    await tester.enterText(
+        find.byKey(const ValueKey('Signup-ConfirmPassword_ho75')),
+        'johnpork676141@gmail.com');
+    await tester.tap(find.byKey(const ValueKey('Signup-Button_gp6i')));
   });
 }
 
