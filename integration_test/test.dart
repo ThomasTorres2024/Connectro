@@ -39,7 +39,9 @@ void main() async {
 
     await tester.pumpWidget(ChangeNotifierProvider(
       create: (context) => FFAppState(),
-      child: const MyApp(),
+      child: MyApp(
+        entryPage: LoginWidget(),
+      ),
     ));
     await GoogleFonts.pendingFonts();
 
@@ -50,7 +52,7 @@ void main() async {
         'johnpork67@gmail.com');
     await tester.tap(find.byKey(const ValueKey('Signup-Button_gp6i')));
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
-    expect(find.byKey(const ValueKey('Button_6n18')), findsOneWidget);
+    expect(find.byKey(const ValueKey('TranslationAdd_11l6')), findsOneWidget);
   });
 }
 

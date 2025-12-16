@@ -116,7 +116,6 @@ class _TranslationAddWidgetState extends State<TranslationAddWidget> {
                         Align(
                           alignment: AlignmentDirectional(0.0, 0.0),
                           child: FFButtonWidget(
-                            key: ValueKey('Button_6n18'),
                             onPressed: () async {
                               logFirebaseEvent(
                                   'TRANSLATION_ADD_CREATE_NEW_DOCUMENT_BTN_');
