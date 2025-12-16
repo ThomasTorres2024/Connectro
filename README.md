@@ -16,8 +16,6 @@ For session 3 CSC 305 at URI.
 
 ## Links
 
-- **FlutterFlow**: (Probably not smart to show this while this is public, will add later when this can be privated)
-- **Firebase Console**: (Probably not smart to show this while this is public, will add later when this can be privated)
 - **Lean Canvas**: [Lean Canvas](https://docs.google.com/presentation/d/1IO8DcUtkG0RPtBLweezsQwR5sQaCCHiP0q57RFTrAZ8/edit?slide=id.gc8216bd24_20_0#slide=id.gc8216bd24_20_0)
 - **Persona Slides**: [docs/PERSONAS.md](docs/PERSONAS.md)
 - **Code of Conduct**: [docs/CONDUCT.md](docs/CONDUCT.md)
