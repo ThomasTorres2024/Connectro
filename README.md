@@ -1,6 +1,4 @@
 # Connectro — CSC 305 Project
-[Google Docs Link](https://docs.google.com/document/d/17fszMEMe1iC-6qJJKvuIF9Nfc22m-EoNjX6eP6KUfvM/edit?usp=sharing)
-
 
 ## About
 For session 3 CSC 305 at URI. 
