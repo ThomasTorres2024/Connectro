@@ -52,7 +52,9 @@ class _SecondWelcomeWidgetState extends State<SecondWelcomeWidget> {
           child: wrapWithModel(
             model: _model.onboarding2Model,
             updateCallback: () => safeSetState(() {}),
-            child: Onboarding2Widget(),
+            child: Onboarding2Widget(
+              key: ValueKey('Onboarding2_6ymo'),
+            ),
           ),
         ),
       ),

@@ -54,4 +54,33 @@ class FFAppState extends ChangeNotifier {
   void insertAtIndexInTaskListJSON(int index, dynamic value) {
     taskListJSON.insert(index, value);
   }
+
+  List<dynamic> _translatedTasksJSON = [];
+  List<dynamic> get translatedTasksJSON => _translatedTasksJSON;
+  set translatedTasksJSON(List<dynamic> value) {
+    _translatedTasksJSON = value;
+  }
+
+  void addToTranslatedTasksJSON(dynamic value) {
+    translatedTasksJSON.add(value);
+  }
+
+  void removeFromTranslatedTasksJSON(dynamic value) {
+    translatedTasksJSON.remove(value);
+  }
+
+  void removeAtIndexFromTranslatedTasksJSON(int index) {
+    translatedTasksJSON.removeAt(index);
+  }
+
+  void updateTranslatedTasksJSONAtIndex(
+    int index,
+    dynamic Function(dynamic) updateFn,
+  ) {
+    translatedTasksJSON[index] = updateFn(_translatedTasksJSON[index]);
+  }
+
+  void insertAtIndexInTranslatedTasksJSON(int index, dynamic value) {
+    translatedTasksJSON.insert(index, value);
+  }
 }

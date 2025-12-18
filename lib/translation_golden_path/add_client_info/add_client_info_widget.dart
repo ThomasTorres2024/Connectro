@@ -188,6 +188,7 @@ class _AddClientInfoWidgetState extends State<AddClientInfoWidget> {
                                           child: Container(
                                             width: double.infinity,
                                             child: TextFormField(
+                                              key: ValueKey('client_name_r2oi'),
                                               controller: _model
                                                   .clientNameTextController,
                                               focusNode:
@@ -386,6 +387,8 @@ class _AddClientInfoWidgetState extends State<AddClientInfoWidget> {
                                           child: Container(
                                             width: double.infinity,
                                             child: TextFormField(
+                                              key: ValueKey(
+                                                  'client_address_xcm4'),
                                               controller: _model
                                                   .clientAddressTextController,
                                               focusNode:
@@ -584,6 +587,8 @@ class _AddClientInfoWidgetState extends State<AddClientInfoWidget> {
                                           child: Container(
                                             width: double.infinity,
                                             child: TextFormField(
+                                              key:
+                                                  ValueKey('client_email_x7gk'),
                                               controller: _model
                                                   .clientEmailTextController,
                                               focusNode:
@@ -782,6 +787,8 @@ class _AddClientInfoWidgetState extends State<AddClientInfoWidget> {
                                           child: Container(
                                             width: double.infinity,
                                             child: TextFormField(
+                                              key: ValueKey(
+                                                  'client_phone_number_y36o'),
                                               controller: _model
                                                   .clientPhoneNumberTextController,
                                               focusNode: _model
@@ -949,6 +956,7 @@ class _AddClientInfoWidgetState extends State<AddClientInfoWidget> {
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: FFButtonWidget(
+                          key: ValueKey('Button_vgnx'),
                           onPressed: () async {
                             logFirebaseEvent(
                                 'ADD_CLIENT_INFO_PAGE_CONTINUE_BTN_ON_TAP');

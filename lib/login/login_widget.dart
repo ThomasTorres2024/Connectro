@@ -163,6 +163,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                   text: 'Signup',
                                 ),
                                 Tab(
+                                  key: ValueKey('LoginTab_qcnq'),
                                   text: 'Login',
                                 ),
                               ],
@@ -709,6 +710,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                       Container(
                                         width: double.infinity,
                                         child: TextFormField(
+                                          key: ValueKey('Login-Email_k1ry'),
                                           controller:
                                               _model.loginEmailTextController,
                                           focusNode: _model.loginEmailFocusNode,
@@ -881,6 +883,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                       Container(
                                         width: double.infinity,
                                         child: TextFormField(
+                                          key: ValueKey('Login-Password_t0pw'),
                                           controller: _model
                                               .loginPasswordTextController,
                                           focusNode:

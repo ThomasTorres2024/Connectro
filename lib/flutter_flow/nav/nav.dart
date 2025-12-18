@@ -122,15 +122,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           builder: (context, params) => ProfileAltCopyWidget(),
         ),
         FFRoute(
-            name: AllTranslatedDocumentsWidget.routeName,
-            path: AllTranslatedDocumentsWidget.routePath,
-            builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'AllTranslatedDocuments')
-                : NavBarPage(
-                    initialPage: 'AllTranslatedDocuments',
-                    page: AllTranslatedDocumentsWidget(),
-                  )),
-        FFRoute(
           name: LoginWidget.routeName,
           path: LoginWidget.routePath,
           builder: (context, params) => LoginWidget(),
@@ -180,11 +171,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           builder: (context, params) => SecondWelcomeWidget(),
         ),
         FFRoute(
-          name: ProfileSetupWidget.routeName,
-          path: ProfileSetupWidget.routePath,
-          builder: (context, params) => ProfileSetupWidget(),
-        ),
-        FFRoute(
           name: FirstWelcomeWidget.routeName,
           path: FirstWelcomeWidget.routePath,
           builder: (context, params) => FirstWelcomeWidget(),
@@ -198,6 +184,43 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           name: Profilesetup2Widget.routeName,
           path: Profilesetup2Widget.routePath,
           builder: (context, params) => Profilesetup2Widget(),
+        ),
+        FFRoute(
+            name: AllTranslatedDocumentsWidget.routeName,
+            path: AllTranslatedDocumentsWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'AllTranslatedDocuments')
+                : NavBarPage(
+                    initialPage: 'AllTranslatedDocuments',
+                    page: AllTranslatedDocumentsWidget(),
+                  )),
+        FFRoute(
+          name: ProfileSetupWidget.routeName,
+          path: ProfileSetupWidget.routePath,
+          builder: (context, params) => ProfileSetupWidget(),
+        ),
+        FFRoute(
+          name: GetTranslatedDocumentWidget.routeName,
+          path: GetTranslatedDocumentWidget.routePath,
+          builder: (context, params) => GetTranslatedDocumentWidget(
+            companyInfo: params.getParam(
+              'companyInfo',
+              ParamType.JSON,
+            ),
+            clientInfo: params.getParam(
+              'clientInfo',
+              ParamType.JSON,
+            ),
+            tasksInfo: params.getParam<dynamic>(
+              'tasksInfo',
+              ParamType.JSON,
+              isList: true,
+            ),
+            documentType: params.getParam(
+              'documentType',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: TranslationAddWidget.routeName,
@@ -221,29 +244,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
             companyInfo: params.getParam(
               'companyInfo',
               ParamType.JSON,
-            ),
-          ),
-        ),
-        FFRoute(
-          name: GetTranslatedDocumentWidget.routeName,
-          path: GetTranslatedDocumentWidget.routePath,
-          builder: (context, params) => GetTranslatedDocumentWidget(
-            companyInfo: params.getParam(
-              'companyInfo',
-              ParamType.JSON,
-            ),
-            clientInfo: params.getParam(
-              'clientInfo',
-              ParamType.JSON,
-            ),
-            tasksInfo: params.getParam<dynamic>(
-              'tasksInfo',
-              ParamType.JSON,
-              isList: true,
-            ),
-            documentType: params.getParam(
-              'documentType',
-              ParamType.String,
             ),
           ),
         )

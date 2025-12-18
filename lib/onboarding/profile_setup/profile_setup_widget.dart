@@ -143,6 +143,7 @@ class _ProfileSetupWidgetState extends State<ProfileSetupWidget> {
                   children: [
                     Expanded(
                       child: Column(
+                        key: ValueKey('Column_i2py'),
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -187,6 +188,7 @@ class _ProfileSetupWidgetState extends State<ProfileSetupWidget> {
                           Container(
                             width: double.infinity,
                             child: TextFormField(
+                              key: ValueKey('TextField_3zjw'),
                               controller: _model.textController1,
                               focusNode: _model.textFieldFocusNode1,
                               onChanged: (_) => EasyDebounce.debounce(
@@ -314,6 +316,7 @@ class _ProfileSetupWidgetState extends State<ProfileSetupWidget> {
                           Container(
                             width: double.infinity,
                             child: TextFormField(
+                              key: ValueKey('TextField_qoul'),
                               controller: _model.textController2,
                               focusNode: _model.textFieldFocusNode2,
                               onChanged: (_) => EasyDebounce.debounce(
@@ -440,6 +443,7 @@ class _ProfileSetupWidgetState extends State<ProfileSetupWidget> {
                             ),
                           ),
                           FlutterFlowDropDown<String>(
+                            key: ValueKey('DropDown_jjrs'),
                             controller: _model.dropDownValueController ??=
                                 FormFieldController<String>(
                               _model.dropDownValue ??= 'English',
@@ -497,6 +501,7 @@ class _ProfileSetupWidgetState extends State<ProfileSetupWidget> {
                       ),
                     ),
                     FFButtonWidget(
+                      key: ValueKey('Button_l12a'),
                       onPressed: () async {
                         logFirebaseEvent(
                             'PROFILE_SETUP_COMPLETE_PROFILE_BTN_ON_TA');

@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/index.dart';
@@ -33,6 +34,8 @@ class BusinessNameAndDestinationLangModel
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
+  // Stores action output result for [Backend Call - API (JSONtoNEightN)] action in Button widget.
+  ApiCallResponse? translatedJSON;
 
   @override
   void initState(BuildContext context) {}

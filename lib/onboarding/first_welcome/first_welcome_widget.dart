@@ -52,7 +52,9 @@ class _FirstWelcomeWidgetState extends State<FirstWelcomeWidget> {
           child: wrapWithModel(
             model: _model.onboarding1Model,
             updateCallback: () => safeSetState(() {}),
-            child: Onboarding1Widget(),
+            child: Onboarding1Widget(
+              key: ValueKey('Onboarding1_sugq'),
+            ),
           ),
         ),
       ),

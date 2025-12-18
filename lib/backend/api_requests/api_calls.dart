@@ -73,6 +73,37 @@ class NewapicallCall {
   }
 }
 
+class JSONtoNEightNCall {
+  static Future<ApiCallResponse> call({
+    dynamic tasksListJson,
+    String? toLang = 'english',
+  }) async {
+    final tasksList = _serializeJson(tasksListJson, true);
+    final ffApiRequestBody = '''
+{
+  "from_lang": "english",
+  "to_lang": "${escapeStringForJson(toLang)}",
+  "tasks": ${tasksList}
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'JSONtoNEightN',
+      apiUrl:
+          'https://connectro2.app.n8n.cloud/webhook/c9a1ef05-800a-4e81-81b9-7ceb722305c7',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;

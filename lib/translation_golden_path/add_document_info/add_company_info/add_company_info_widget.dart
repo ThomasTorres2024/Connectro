@@ -184,6 +184,8 @@ class _AddCompanyInfoWidgetState extends State<AddCompanyInfoWidget> {
                                           child: Container(
                                             width: double.infinity,
                                             child: TextFormField(
+                                              key:
+                                                  ValueKey('company_name_ak3c'),
                                               controller: _model
                                                   .companyNameTextController,
                                               focusNode:
@@ -581,6 +583,8 @@ class _AddCompanyInfoWidgetState extends State<AddCompanyInfoWidget> {
                                           child: Container(
                                             width: double.infinity,
                                             child: TextFormField(
+                                              key: ValueKey(
+                                                  'company_email_ltrn'),
                                               controller: _model
                                                   .companyEmailTextController,
                                               focusNode:
@@ -780,6 +784,8 @@ class _AddCompanyInfoWidgetState extends State<AddCompanyInfoWidget> {
                                           child: Container(
                                             width: double.infinity,
                                             child: TextFormField(
+                                              key: ValueKey(
+                                                  'company_phone_number_b695'),
                                               controller: _model
                                                   .companyPhoneNumberTextController,
                                               focusNode: _model
@@ -947,6 +953,7 @@ class _AddCompanyInfoWidgetState extends State<AddCompanyInfoWidget> {
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: FFButtonWidget(
+                          key: ValueKey('Button_3w8t'),
                           onPressed: () async {
                             logFirebaseEvent(
                                 'ADD_COMPANY_INFO_CONTINUE_BTN_ON_TAP');

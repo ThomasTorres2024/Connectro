@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/individual_task_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
@@ -389,6 +390,7 @@ class _BusinessNameAndDestinationLangWidgetState
                           ),
                         ),
                         FlutterFlowIconButton(
+                          key: ValueKey('IconButton_hm72'),
                           borderColor: FlutterFlowTheme.of(context).primaryText,
                           borderRadius: 30.0,
                           borderWidth: 2.0,
@@ -483,9 +485,25 @@ class _BusinessNameAndDestinationLangWidgetState
                           padding: EdgeInsetsDirectional.fromSTEB(
                               25.0, 0.0, 100.0, 0.0),
                           child: FFButtonWidget(
+                            key: ValueKey('Button_esj2'),
                             onPressed: () async {
                               logFirebaseEvent(
                                   'BUSINESS_NAME_AND_DESTINATION_LANG_DONE_');
+                              logFirebaseEvent('Button_backend_call');
+                              _model.translatedJSON =
+                                  await JSONtoNEightNCall.call(
+                                tasksListJson: FFAppState().taskListJSON,
+                                toLang: valueOrDefault<String>(
+                                  _model.dropDownValue,
+                                  'english',
+                                ),
+                              );
+
+                              logFirebaseEvent('Button_update_app_state');
+                              FFAppState().translatedTasksJSON =
+                                  (_model.translatedJSON?.jsonBody ?? '')
+                                      .toList()
+                                      .cast<dynamic>();
                               logFirebaseEvent('Button_navigate_to');
 
                               context.pushNamed(
@@ -500,7 +518,7 @@ class _BusinessNameAndDestinationLangWidgetState
                                     ParamType.JSON,
                                   ),
                                   'tasksInfo': serializeParam(
-                                    FFAppState().taskListJSON,
+                                    FFAppState().translatedTasksJSON,
                                     ParamType.JSON,
                                     isList: true,
                                   ),
@@ -510,6 +528,8 @@ class _BusinessNameAndDestinationLangWidgetState
                                   ),
                                 }.withoutNulls,
                               );
+
+                              safeSetState(() {});
                             },
                             text: 'Done',
                             options: FFButtonOptions(

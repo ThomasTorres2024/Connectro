@@ -166,6 +166,7 @@ class _GetTranslatedDocumentWidgetState
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: FFButtonWidget(
+                          key: ValueKey('Button_m0r8'),
                           onPressed: () async {
                             logFirebaseEvent(
                                 'GET_TRANSLATED_DOCUMENT_CREATE_NEW_DOCUM');
